@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="" />
+        <link rel="icon" type="image/png" href="./27dayslogo.png" />
         </head>
       <body className={bicolage.className}>{children}</body>
     </html>
