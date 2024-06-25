@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import Waitlist from "./Waitlist";
 import Disclaimer from "./Disclaimer";
-
+import { FaHandshakeAngle } from "react-icons/fa6";
 const Hero = () => {
   return (
     <div className="w-full border-b border-black pb-8 flex flex-col justify-center items-center gap-3">
