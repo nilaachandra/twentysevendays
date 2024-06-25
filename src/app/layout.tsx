@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const bicolage = Bricolage_Grotesque({subsets: ['latin'], weight: ["400", "800" ]})
 
 export const metadata: Metadata = {
   title: "27Days - Get Rid of Your Addiction",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bicolage.className}>{children}</body>
     </html>
   );
 }
