@@ -1,6 +1,9 @@
-import Button from "./Button"
+
+import Button from "./Button";
 
 const Waitlist = () => {
+  
+
   return (
     <label
       htmlFor=""
@@ -10,10 +13,11 @@ const Waitlist = () => {
         type="text"
         placeholder="enter your email"
         className="lg:w-1/2 w-full border border-black p-2 rounded-md"
+        
       />
-      <Button>Join the Waitlist</Button>
+      <Button >Join the Waitlist</Button>
     </label>
-  )
-}
+  );
+};
 
-export default Waitlist
+export default Waitlist;

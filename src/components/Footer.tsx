@@ -2,7 +2,7 @@ import {RiTwitterXLine, RiFacebookFill, RiGithubFill, RiInstagramFill } from 're
 
 const Footer = () => {
   return (
-    <div className='mt-4 p-4'>
+    <div className='mt-4 p-4 border-t border-black'>
     <div className="icons text-sm flex justify-center items-center gap-2">
             <a href='https://twitter.com/nilaacodes' target='_blank'><RiTwitterXLine size={30}/></a>
             <a href=''  target='_blank'><RiFacebookFill size={30}/></a>
