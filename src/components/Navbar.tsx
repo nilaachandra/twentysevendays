@@ -2,7 +2,9 @@ import React from "react";
 import Button from "./Button";
 import { FaHandsHelping } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+
 import Link from "next/link";
+import LoginButton from "./LoginLogOutButton";
 const Navbar = () => {
   return (
     <div className="w-full py-4 flex justify-between border-b border-black mb-3">
@@ -12,11 +14,12 @@ const Navbar = () => {
           <FaHandsHelping size={24} /> 27Days
         </h1>
       </Link>
-      <Button className="font-semibold">
+      {/* <Button className="font-semibold">
         <a href="https://x.com/nilaacodes" target="_blank">
           <FaTwitter size={24} />
         </a>
-      </Button>
+      </Button> */}
+      <LoginButton/>
     </div>
   );
 };

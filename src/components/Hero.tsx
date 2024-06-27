@@ -24,7 +24,7 @@ const Hero = () => {
         <span className="text-orange-500 font-bold">addiction</span> to{" "}
         <span className="text-orange-500 font-bold">lose</span>. 🚀
       </p>
-      <Link href="/login">
+      <Link href="">
         <Button>Check Out the mini MVP</Button>
       </Link>
       <p className="font-semibold mt-8">
