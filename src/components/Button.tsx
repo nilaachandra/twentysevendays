@@ -1,5 +1,5 @@
 import { ReactNode, MouseEventHandler } from "react";
-
+//not required but kept it for future reference
 interface ButtonProps {
   children: ReactNode;
   className?: string;

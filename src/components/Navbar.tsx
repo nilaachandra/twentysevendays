@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "./Button";
+
 import { FaHandsHelping } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
 import Link from "next/link";
-import LoginButton from "./LoginLogOutButton";
+import { Button } from "./ui/button";
 const Navbar = () => {
   return (
     <div className="w-full py-4 flex justify-between border-b border-black mb-3">
@@ -19,7 +19,7 @@ const Navbar = () => {
           <FaTwitter size={24} />
         </a>
       </Button> */}
-      <LoginButton/>
+      <Link href='/login'><Button>Login</Button></Link>
     </div>
   );
 };
