@@ -1,10 +1,15 @@
+"use client"
 import React from "react";
 import Waitlist from "./Waitlist";
 import Disclaimer from "./Disclaimer";
 import { FaHandshakeAngle } from "react-icons/fa6";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import useUser from "@/app/hook/useUser";
 const Hero = () => {
+  const { isFetching, data } = useUser();
+
+
   return (
     <div className="w-full pb-8 flex flex-col justify-center items-center gap-3">
       <h1 className="w-full lg:w-1/2 lg:text-5xl text-4xl text-center font-bold">
@@ -24,7 +29,7 @@ const Hero = () => {
         <span className="text-orange-500 font-bold">addiction</span> to{" "}
         <span className="text-orange-500 font-bold">lose</span>. 🚀
       </p>
-      <Link href="">
+      <Link href={data ? '/home' : '/login'}>
         <Button>Check Out the mini MVP</Button>
       </Link>
       <p className="font-semibold mt-8">

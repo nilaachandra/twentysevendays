@@ -4,6 +4,8 @@ import "./globals.css";
 import Wrapper from "@/components/Wrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { QueryClientProvider } from "@tanstack/react-query";
+import QueryProvider from "@/components/queryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 const bricolage = Bricolage_Grotesque({
@@ -28,14 +30,15 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/png" href="27dayslogo.png" />
-        
       </head>
       <body className={bricolage.className}>
-        <Wrapper>
-          <Navbar />
+        <QueryProvider>
+          <Wrapper>
+            <Navbar />
             <main>{children}</main>
-          <Footer />
-        </Wrapper>
+            <Footer />
+          </Wrapper>
+        </QueryProvider>
       </body>
     </html>
   );
