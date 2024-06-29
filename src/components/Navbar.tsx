@@ -21,9 +21,10 @@ const Navbar = () => {
     queryClient.clear();
     await supabase.auth.signOut();
     router.refresh();
+    
     refetch();
   };
-  
+
   return (
     <div className="w-full py-4 flex justify-between border-b border-black mb-3">
       <Link href="/">
