@@ -3,11 +3,12 @@ import { createClient } from "@/lib/supabase/browserclient";
 import { useQuery } from "@tanstack/react-query";
 
 const initUser = {
-    created_at: "",
-    display_name: "",
-    email: "",
-    id: "",
-    img_url: ""
+  addiction: "",
+  created_at: "",
+  display_name: "",
+  email: "",
+  id: "",
+  img_url: "",
 };
 
 const useUser = () => {

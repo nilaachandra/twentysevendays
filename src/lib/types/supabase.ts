@@ -11,6 +11,7 @@ export type Database = {
     Tables: {
       profile: {
         Row: {
+          addiction: string | null
           created_at: string
           display_name: string | null
           email: string | null
@@ -18,6 +19,7 @@ export type Database = {
           img_url: string | null
         }
         Insert: {
+          addiction?: string | null
           created_at?: string
           display_name?: string | null
           email?: string | null
@@ -25,6 +27,7 @@ export type Database = {
           img_url?: string | null
         }
         Update: {
+          addiction?: string | null
           created_at?: string
           display_name?: string | null
           email?: string | null
@@ -40,6 +43,56 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      strategies: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: number
+          is_completed: boolean | null
+          strategy: string | null
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: number
+          is_completed?: boolean | null
+          strategy?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: number
+          is_completed?: boolean | null
+          strategy?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "strategies_email_fkey"
+            columns: ["email"]
+            isOneToOne: false
+            referencedRelation: "profile"
+            referencedColumns: ["email"]
+          },
+        ]
+      }
+      waitlist: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: number
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: number
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: number
+        }
+        Relationships: []
       }
     }
     Views: {

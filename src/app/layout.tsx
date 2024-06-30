@@ -6,7 +6,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { QueryClientProvider } from "@tanstack/react-query";
 import QueryProvider from "@/components/queryProvider";
-
+import { Toaster } from "sonner";
+import { StrategyProvider } from "@/contexts/StrategyContext";
 const inter = Inter({ subsets: ["latin"] });
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -33,11 +34,14 @@ export default function RootLayout({
       </head>
       <body className={bricolage.className}>
         <QueryProvider>
-          <Wrapper>
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-          </Wrapper>
+          <StrategyProvider>
+            <Wrapper>
+              <Toaster richColors position="top-center" duration={3000}/>
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </Wrapper>
+          </StrategyProvider>
         </QueryProvider>
       </body>
     </html>
