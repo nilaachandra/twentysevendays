@@ -81,7 +81,7 @@ const Homepage: React.FC = () => {
           <Skeleton className="h-28 mt-2 w-full bg-slate-400" />
           <Skeleton className="h-7 mt-2 w-full bg-slate-400" />
         </div>
-        <div className="rightdiv tips w-full lg:pt-24 pt-3 h-full and motivation lg:border-l lg:pl-8 pl-0 lg:border-t-0 border-t border-orange-700">
+        <div className="rightdiv tips w-full lg:pt-24 pt-4 h-full and motivation lg:border-l lg:pl-8 pl-0 lg:border-t-0 border-t border-orange-700">
           <Skeleton className="h-5 w-full bg-slate-400" />
           <Skeleton className="h-3 mt-3 w-full bg-slate-400" />
           <Skeleton className="h-3 mt-2 w-full bg-slate-400" />
@@ -94,8 +94,8 @@ const Homepage: React.FC = () => {
   if (data && data.length > 0) {
     const user = data[0];
     return (
-      <div className="w-full min-h-[60vh] grid lg:grid-cols-2 gap-2 grid-cols-1 lg:grid-rows-1 grid-rows-2">
-        <div className="w-full lg:pr-8 pr-0">
+      <div className="w-full lg:min-h-[60vh] min-h-[30vh] grid lg:grid-cols-2 gap-2 grid-cols-1 lg:grid-rows-1 grid-rows-2">
+        <div className="lg:pr-8 pr-0">
           <p>
             Welcome to 27days,{" "}
             <span className="font-semibold text-orange-500">
@@ -104,7 +104,7 @@ const Homepage: React.FC = () => {
           </p>
           <p>We are happy to help you fight💪 your Addictions!</p>
 
-          <>
+          
             <p className="mt-3">Please Tell Us About Your Addiction</p>
             <textarea
               value={addiction}
@@ -120,26 +120,12 @@ const Homepage: React.FC = () => {
             >
               Generate Strategies to get rid of My Addiction
             </Button>
-          </>
-
-          <div>
-            {/* <Card className="motivation p-3 flex justify-center items-center min-h-28 mt-3 border-orange-500">
-              <p className="font-semibold text-lg">
-                Success is not for the faint of heart. It's for those who get
-                knocked down, dust themselves off, and refuse to stay down. Keep
-                going, no matter what.
-              </p>
-            </Card> */}
-            <div className="">
-              {/* <p className="mt-3 font-semibold">Your Progress : 1/27 Days</p> */}
-              {/* progress bar */}
-            </div>
-          </div>
+      
         </div>
         <div className="tips w-full h-full and motivation lg:border-l lg:pl-8 pl-0 lg:border-t-0 border-t border-orange-700">
           {output.data.length === 0 && (
             <div className="w-full lg:pt-24 pt-3 flex flex-col justify-center items-center p-4">
-              <h1 className="text-xl font-semibold text-orange-500">
+              <h1 className="text-xl text-center font-semibold text-orange-500">
                 You Have Not Generated Any Strategies 🙄
               </h1>
               <p className="mt-2 text-center text-gray-700">
@@ -166,7 +152,7 @@ const Homepage: React.FC = () => {
 
                 </div>
               ) : (
-                <div>
+                <div className="pl-7">
                   <p className="font-bold text-lg">
                     As if life is not complicated enough, here are your next
                     thrilling challenges. Enjoy!

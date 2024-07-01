@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { QueryClientProvider } from "@tanstack/react-query";
 import QueryProvider from "@/components/queryProvider";
+import { Analytics } from "@vercel/analytics/react"
 import { Toaster } from "sonner";
 import { StrategyProvider } from "@/contexts/StrategyContext";
 const inter = Inter({ subsets: ["latin"] });
@@ -43,6 +44,8 @@ export default function RootLayout({
             </Wrapper>
           </StrategyProvider>
         </QueryProvider>
+        <Analytics/>
+
       </body>
     </html>
   );
