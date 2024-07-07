@@ -15,7 +15,7 @@ bun dev
 ```
 Run this when you do any changes in your Supabase project to generate types - 
 ```bash 
-npx supabase gen types typescript --project-id "vtncnbjpdoqnpvojvlis" | Set-Content -Encoding utf8 .\src\lib\types\supabase.ts
+npx supabase gen types typescript --project-id "your project's ref id" | Set-Content -Encoding utf8 .\src\lib\types\supabase.ts
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
