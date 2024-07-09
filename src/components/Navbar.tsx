@@ -40,13 +40,13 @@ const Navbar = () => {
       </Button> */}
 
       <div>
-        <Link href="/login">
+        {/* <Link href="/login">
           {data ? (
             <Button onClick={handleLogout}>Logout</Button>
           ) : (
             <Button>Login</Button>
           )}
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

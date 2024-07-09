@@ -29,9 +29,9 @@ const Hero = () => {
         <span className="text-orange-500 font-bold">addiction</span> to{" "}
         <span className="text-orange-500 font-bold">lose</span>. 🚀
       </p>
-      <Link href={data ? '/home' : '/login'}>
+      {/* <Link href={data ? '/home' : '/login'}>
         <Button>Check Out the mini MVP</Button>
-      </Link>
+      </Link> */}
       <p className="font-semibold mt-8">
         Also Join the{" "}
         <span className="text-orange-500 font-bold">Waitlist</span> for the
