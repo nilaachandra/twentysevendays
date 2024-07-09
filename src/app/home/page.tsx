@@ -6,10 +6,8 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/browserclient";
-import { useMutation } from "@tanstack/react-query";
 import { generateStrategies } from "./actions";
 import { useStrategy } from "@/contexts/StrategyContext";
-import { set } from "zod";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Homepage: React.FC = () => {
@@ -35,7 +33,7 @@ const Homepage: React.FC = () => {
       const { data } = await generateStrategies(addiction || "");
       setLoading(false);
       setOutput(data);
-      
+
       setAddiction("");
       refetch();
     } catch (error) {
