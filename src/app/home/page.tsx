@@ -35,6 +35,7 @@ const Homepage: React.FC = () => {
       const { data } = await generateStrategies(addiction || "");
       setLoading(false);
       setOutput(data);
+      
       setAddiction("");
       refetch();
     } catch (error) {
